@@ -1,4 +1,4 @@
-module github.com/jbowtie/ratago
+module github.com/MaltegoTech/ratago
 
 go 1.14
 
