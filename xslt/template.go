@@ -64,6 +64,7 @@ func (i *Variable) Apply(node xml.Node, context *ExecutionContext) {
 	// if @select
 	if scope != "" {
 		e := xpath.Compile(scope)
+		defer e.Free()
 		var err error
 		context.RegisterXPathNamespaces(i.Node)
 		i.Value, err = context.EvalXPath(node, e)

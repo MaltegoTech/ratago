@@ -509,6 +509,7 @@ func (m *CompiledMatch) EvalMatch(node xml.Node, mode string, context *Execution
 				}
 				e := xpath.Compile(xp)
 				o, err := node.Search(e)
+				e.Free()
 				if err != nil {
 					//fmt.Println("ERROR",err)
 				}
